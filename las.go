@@ -53,7 +53,7 @@ func (l *LasType) Data() [][]string {
 	if err != nil {
 		panic("No data in file")
 	}
-	sB := pattern("~A(?:\\w*\\s*)*\n").Split(l.content, 2)[1]
+	sB := pattern("~A.*\n").Split(l.content, 2)[1]
 	sBs := pattern("\\s+").Split(strings.TrimSpace(sB), -1)
 	return chunk(sBs, len(hds))
 }
