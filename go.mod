@@ -1,4 +1,4 @@
-module github.com/laslibs/las-go
+module github.com/himikk/las-go
 
 go 1.13
 
